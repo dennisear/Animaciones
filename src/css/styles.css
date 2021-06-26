@@ -4,27 +4,26 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: rgb(232, 218, 255);
 
 }
-button{
+
+@font-face {
+    font-family: 'Edmonsans';
+    src: url(../utils/fonts/EdmondsansRegular.ttf);
+}
+
+button, .Den{
     width: 200px;
     height: 80px;
-    font-size: 20px;
-    color:  Red ;
+    font-size: 25px;
+    color:  rgb(0, 0, 0) ;
     margin: 0px 20px;
+    border: 3px solid #53a379;
+    background: rgb(83,163,121);
+    background: linear-gradient(90deg, rgba(83,163,121,0.5508578431372548) 37%, rgba(139,99,163,0.4948354341736695) 73%);
+    font-family: 'Edmonsans';
 }
-
-.Juan{
-
-}
-.Maria{
-
-}
-
-.Sofia{
-
-}
-
-.Ana{
-
+button.Den:hover {
+    color: #53a379;
 }
