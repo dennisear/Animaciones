@@ -1,0 +1,430 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(232, 218, 255);
+    font-family: 'Sunny';
+    font-size: 25px;
+    
+
+    
+
+}
+
+@font-face {
+    font-family: 'Sunny';
+    src: url(../utils/fonts/SunnyWeather.otf);
+}
+
+.menu{
+    display: grid;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 15px;
+    color: beige;
+}
+
+.menu ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    align-items: center;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+.menu ul li{
+    background-color: #53A379;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-family: 'Sunny';
+    font-size: 30px;
+    width: auto;
+    padding: 10px 10px 10px 30px;
+    margin: 10px;
+    height: 70%;
+    border-radius: 30px;
+    border:1px solid black;
+    transition: border 2s, background-color 2s, box-shadow 3s;
+}
+
+.menu ul li:hover{
+    background-color: #315742;
+    border: 1px solid #315742;
+    box-shadow: 4px 4px 14px 8px rgba(244, 19,19, 0.1);
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    display: flex;
+    width: 100%;
+}
+.tituloJuan{
+    position: absolute;
+    font-size: 40px;
+    margin: auto;
+    right: 50%;
+    animation: ease;
+    animation-name: slideinTitle;
+    animation-duration: 3s;
+}
+
+.cabecera{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.cubo-P{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    animation: ease-in-out;
+    animation-name: slidein;
+    animation-duration: 3s;
+    justify-content: center;
+    font-size: 40px;
+    align-items: flex-start;
+    
+}
+
+.cubo1{transition: width 2s, height 2s, background-color 2s,transform 5s, opacity 6s; }
+.cubo2{transition: width 2s, height 2s, background-color 2s,transform 5s,}
+
+
+
+.cubo1:hover{
+    background-color: burlywood;
+    width: 280px;
+    height: 280px;
+    transform: scale(0.5);
+    align-items: center;
+    opacity: 0;
+}
+
+.cubo2{
+    background-color: chartreuse;
+}
+
+.cubo2:hover{
+    background-color: burlywood;
+    width: 280px;
+    height: 280px;
+    transform: scale(1);
+    align-items: center;
+}
+
+.michi{
+    display: flex;
+    width: 30%;
+    height: auto;
+    animation: ease-in-out;
+    animation-name: "";
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    transition: transform 3s;
+}
+
+ 
+.michi:hover{
+    transform:rotate(360deg) ;
+}
+
+/*section giros*/
+
+#giros{
+    border: 2px solid #A39374;
+    background: rgb(83,163,121);
+    background: linear-gradient(90deg, rgba(83,163,121,1) 0%, rgba(139,99,163,0.7217261904761905) 44%);
+    display: grid;
+    width: 99%;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    align-items: center;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+.card{
+    display: flex;
+    width: 160px;
+    height: 160px;
+    align-items: center;
+    justify-content: center;
+    background-color: #A39374;
+    text-align: center;
+    margin: 20px;
+
+}
+
+.card2{
+    display: flex;
+    width: 160px;
+    height: 160px;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+    background-color: #A39374;
+    text-align: center;
+    margin: 20px;
+}
+
+
+#transiciones{
+    border: 2px solid #A39374;
+    background: rgb(83,163,121);
+    background: linear-gradient(90deg, rgba(83,163,121,1) 0%, rgba(139,99,163,0.7217261904761905) 44%);
+    display: grid;
+    width: 99%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-self: center;
+    align-items: center;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+/* animacion */
+@keyframes slidein {
+    from {
+    margin-left: 100%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+@keyframes slideinTitle {
+    from {
+    right: 100%;
+    }
+    to {
+        right:50%;
+    }
+}
+
+@keyframes slideup {
+    from {
+        margin-top:100%;
+    }
+    to {
+        margin-top:0%;
+    }
+}
+
+@keyframes girar{
+
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes llegadaDerecha {
+    0%{ 
+        opacity:0;
+        transform: translateX(1000px);
+    }
+    
+    60%{ 
+        opacity:0.8;
+        transform: translateX(-80px);
+    }
+    80%{ 
+        opacity:0.9;
+        transform: translateX(15px);
+    }
+    100%{ 
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes llegadaIzquierda{
+    0%{ 
+        opacity:0;
+        transform: translateX(-1000px);
+    }
+    
+    60%{ 
+        opacity:0.8;
+        transform: translateX(80px);
+    }
+    80%{ 
+        opacity:0.9;
+        transform: translateX(-15px);
+    }
+    100%{ 
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes llegadaArriba{
+    0%{ 
+        opacity:0;
+        transform: translateY(-1000px);
+    }
+    
+    60%{ 
+        opacity:0.8;
+        transform: translateY(80px);
+    }
+    80%{ 
+        opacity:0.9;
+        transform: translateY(-15px);
+    }
+    100%{ 
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes llegadaAbajo{
+    0%{ 
+        opacity:0;
+        transform: translateY(1000px);
+    }
+    
+    60%{ 
+        opacity:0.8;
+        transform: translateY(-80px);
+    }
+    80%{ 
+        opacity:0.9;
+        transform: translateY(15px);
+    }
+    100%{ 
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/*Giros*/
+
+.Giro_completo:hover{
+    transition: transform 3s;
+    transform: rotate(360deg);
+
+}
+
+.Giro_completo_right:hover{
+    transition: transform 3s;
+    transform: rotate(-360deg);
+}
+
+
+.Giro_completo_left:hover{
+    transition: transform 3s;
+    transform: rotate(360deg);
+}
+
+
+.Giro_medio:hover{
+    transition: transform 3s;
+    transform: rotate(90deg);
+}
+
+.Giro_medio_left:hover{
+    transition: transform 3s;
+    transform: rotate(90deg);
+}
+
+.Giro_medio_right:hover{
+    transition: transform 3s;
+    transform: rotate(-90deg);
+}
+
+.Giro_infinite:hover{
+    animation-name: girar;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    transform: rotate(360deg);
+}
+
+/*Transiciones*/
+
+.slideLeft{
+    animation-name: llegadaDerecha;
+    animation-duration: 3s;
+}
+
+
+.slideRight{
+    animation-name: llegadaIzquierda;
+    animation-duration: 3s;
+}
+
+
+.slideTop{
+    animation-name: llegadaArriba;
+    animation-duration: 3s;
+}
+
+.slideBottom{
+    animation-name: llegadaAbajo;
+    animation-duration: 3s;
+}
+
+
+/*Responsive design*/
+@media screen and (min-width:421px) and (max-width:750px){
+    #transiciones, #giros{
+       grid-template-columns: 1fr;
+    }
+
+    .menu ul{
+        grid-template-columns: 1fr;
+    }
+
+    .menu ul li {
+        height: 40%;
+        margin: 5px;
+    }
+
+    li{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:751px) and (max-width:800px){
+    #transiciones, #giros{
+        grid-template-columns: 1fr;
+    }
+
+    .menu ul{
+        grid-template-columns: 1fr;
+    }
+
+    .menu ul li {
+        height: 40%;
+        margin: 5px;
+    }
+}
