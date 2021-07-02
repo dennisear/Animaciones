@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Dennis.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../utils/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../utils/images/favicon.ico" type="image/x-icon">
+    <title>Animations</title>
 </head>
 
 <body>
@@ -18,9 +20,9 @@
                     <path d="M0.00,49.98 C149.99,150.00 220.93,-33.05 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
                         style="stroke: none; fill: rgb(139, 99, 163);"></path>
                 </svg>
-                <h1 class="tituloJuan"> Animaciones</h1>
             </div>
         </div>
+
         <!--Corresponde al menú-->
         <div class="menu">
             <ul>
@@ -30,6 +32,7 @@
                 <li>ANIMACIONES</li>
             </ul>
         </div>
+
 <!--Corresponde a la sección de giros-->
         <h2>Giros</h2>
         <section class="giros"> 
@@ -56,7 +59,8 @@
             </div>
 
         </section>
-    <!--Corresponde a la sección de transciones-->
+
+    <!--Corresponde a la sección de transiciones-->
        <h2>Transiciones</h2>
         <section class="transiciones"> 
             <div class="card2 slideLeft">
@@ -83,7 +87,50 @@
                 Zoom Out 
             </div>
         </section>
-    </div>
-</body>
 
+    <!--Corresponde a la sección de Animaciones-->
+        <h2>Animaciones</h2>
+        <section class="anim" id="anim">
+            <div id="visor">
+                <img id="backAirplane" src="../utils/images/fondiss.jpg" alt="backAirplane">            
+                <img id="airplane" src="../utils/images/avion.png" alt="airplane">
+            </div>
+            <div class="buttons">
+                <svg viewBox="0 0 600 300">
+                    <!-- Symbol-->
+                    <symbol id="s-text"><text text-anchor="middle" x="50%" y="50%" dy=".35em">AirPlane</text></symbol><!-- Duplicate symbols-->
+                    <use class="text" xlink:href="#s-text"></use>
+                    <use class="text" xlink:href="#s-text"></use>
+                    <use class="text" xlink:href="#s-text"></use>
+                    <use class="text" xlink:href="#s-text"></use>
+                    <use class="text" xlink:href="#s-text"></use>
+                </svg>
+                <form action="#" name="controles" id="controles">
+                    <p><button class="ov-btn-slide-close"  name="stop" onclick="parar()">¡DETENTE!</button>
+                    <button class="ov-btn-slide-close"  name="play" onclick="seguir()">¡SIGUE EN VUELO!</button>
+                </form>	                 
+            </div>
+        </section>
+        <section class="otraAnimacion" id="otraAnimacion">
+            <div class="containerA">
+                <ul class="slidesA">
+                  <li id="slide1"><img src="../utils/images/summer.jpg" alt="Summer"></li>
+                  <li id="slide2"><img src="../utils/images/spring.jpg" alt="Spring"></li>
+                  <li id="slide3"><img src="../utils/images/winter.jpg" alt="Winter"></li>
+                  <li id="slide4"><img src="../utils/images/fall.jpg" alt="Fall"></li>
+                </ul>
+                <ul class="thumbnails">
+                  <li><a href="#slide1"><img src="../utils/images/summer.jpg" alt="Summer"></a></li>
+                  <li><a href="#slide2"><img src="../utils/images/spring.jpg" alt="Spring"></a></li>      
+                  <li><a href="#slide3"><img src="../utils/images/winter.jpg" alt="Winter"></a></li>                  
+                  <li><a href="#slide4"><img src="../utils/images/fall.jpg" alt="Fall"></a></li>                  
+                </ul>
+            </div>
+            <div class="containerB">
+                <h4>Seasons</h4>
+            </div>
+        </section>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
 </html>

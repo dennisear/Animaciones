@@ -1,16 +1,9 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    display: flex;
     width: 100%;
     flex-direction: column;
     background-color: rgb(232, 218, 255);
     font-family: 'Sunny';
     font-size: 25px;
-    
-
-    
-
 }
 
 @font-face {
@@ -130,22 +123,6 @@ html, body {
     height: 280px;
     transform: scale(1);
     align-items: center;
-}
-
-.michi{
-    display: flex;
-    width: 30%;
-    height: auto;
-    animation: ease-in-out;
-    animation-name: "";
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-    transition: transform 3s;
-}
-
- 
-.michi:hover{
-    transform:rotate(360deg) ;
 }
 
 /*section giros*/
@@ -414,6 +391,269 @@ html, body {
 .zoomOut:hover{
     transform: scale(0.3);
 
+}
+
+.anim{
+    width: 70%;
+    height: 400px;
+    justify-content: center;
+    padding: 20px 20px;
+    border: 2px solid #A39374;
+    background: rgb(83,163,121);
+    background: linear-gradient(90deg, rgba(83,163,121,1) 37%, rgba(139,99,163,1) 73%);
+}
+.buttons{
+    position: absolute;
+    left: 55%;
+    top: 60%;
+    width: 50%;
+    font: 5em Open Sans, Impact;
+    text-transform: uppercase;
+    margin: 0;
+}
+.ov-btn-slide-close{
+    width: 60%;
+    height: 70px;
+    margin-top: 10%;
+}
+
+#visor { 
+    width: 500px; 
+    height: 440px; 
+    overflow: hidden; 
+    position: absolute; 
+}
+
+#backAirplane { 
+    position: relative; 
+    width: 1500px; 
+    height: 400px; 
+}
+
+#airplane { 
+    position: absolute; 
+    top: 143px; 
+    left: 100px; 
+    width: 235px;  
+}
+
+/*** ESTILOS BOTÓN SLIDE CLOSE ***/
+.ov-btn-slide-close {
+    color: rgb(139, 99, 163);
+    background: rgb(83,163,121); /* color de fondo */
+    border: 3px solid rgb(139, 99, 163); /* tamaño y color de borde */
+    padding-bottom: 16px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    font-family: 'Sunny';
+    font-size: 50px;
+  }
+  .ov-btn-slide-close:before, .ov-btn-slide-close:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    background-color:rgb(139, 99, 163); /* color de fondo hover */
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Sunny';
+  }
+  .ov-btn-slide-close:after {
+    left: 100%;
+  }
+  .ov-btn-slide-close:hover {
+    color: rgb(83,163,121);/* color de fuente hover */
+  }
+  .ov-btn-slide-close:hover:before {
+    left: 0;
+  }
+  .ov-btn-slide-close:hover:after {
+    left: 50%;
+  }
+
+@keyframes miairplane { 
+    from {
+      left: 0px; 
+    }
+	to { 
+        left: -600px; 
+    }   
+}
+@-webkit-keyframes miairplane { 
+    from { 
+        left: 0px; 
+    }
+	to { 
+        left: -600px; 
+    }   
+}
+#backAirplane {
+    animation-name: miairplane;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    -webkit-animation-name: miairplane;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+.otraAnimacion{
+    grid-template-columns: repeat(2,1fr);
+    width: 90%;
+    margin-top: 3%;
+    padding: 20px 0;
+    column-gap: 10px;
+    row-gap: 15px;
+    border: 2px solid #A39374;
+    background: rgb(83,163,121);
+    background: linear-gradient(90deg, rgba(83,163,121,1) 0%, rgba(139,99,163,0.7217261904761905) 44%);
+    display: grid;
+}
+
+
+h4 {
+	display: inline;
+	position: relative;
+	font: 130px Helvetica, Sans-Serif;
+	letter-spacing: -5px;
+	color: rgba(0,0,255,0.5); 
+}
+	
+h4:after {
+    content: "Seasons";
+    position: absolute; left: 10px; top: 5px;
+	color: rgba(255,0,0,0.5);   
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+/* Main styles */
+ .text {
+	 fill: none;
+	 stroke-width: 3;
+	 stroke-linejoin: round;
+	 stroke-dasharray: 70 330;
+	 stroke-dashoffset: 0;
+	 -webkit-animation: stroke 6s infinite linear;
+	 animation: stroke 6s infinite linear;
+}
+ .text:nth-child(5n + 1) {
+	 stroke: #f2385a;
+	 -webkit-animation-delay: -1.2s;
+	 animation-delay: -1.2s;
+}
+ .text:nth-child(5n + 2) {
+	 stroke: #f5a503;
+	 -webkit-animation-delay: -2.4s;
+	 animation-delay: -2.4s;
+}
+ .text:nth-child(5n + 3) {
+	 stroke: #e9f1df;
+	 -webkit-animation-delay: -3.6s;
+	 animation-delay: -3.6s;
+}
+ .text:nth-child(5n + 4) {
+	 stroke: #56d9cd;
+	 -webkit-animation-delay: -4.8s;
+	 animation-delay: -4.8s;
+}
+ .text:nth-child(5n + 5) {
+	 stroke: #3aa1bf;
+	 -webkit-animation-delay: -6s;
+	 animation-delay: -6s;
+}
+ @-webkit-keyframes stroke {
+	 100% {
+		 stroke-dashoffset: -400;
+	}
+}
+ @keyframes stroke {
+	 100% {
+		 stroke-dashoffset: -400;
+	}
+}
+/* Other styles */
+ svg {
+     top: 7%;
+	 position: absolute;
+	 width: 60%;
+	 height: 32%;
+}
+ 
+
+.containerA {
+    display: flex;
+    justify-content: center;
+}
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+}
+.thumbnails li {
+    flex: auto;
+    list-style: none;
+}
+.thumbnails a {
+    display: block;
+}
+.thumbnails img {
+    width: 30vmin;
+    height: 18.7vmin;
+    object-fit: cover;
+    object-position: top;
+}
+.slidesA {
+    overflow: hidden;
+    width: 40vmin;
+    height: 65vmin;
+}
+.slidesA li {
+    width: 40vmin;
+    height: 65vmin;
+    position: absolute;
+    z-index: 1;
+    list-style: none;
+}
+.slidesA img {
+    width: 50vmin;
+    height: 75vmin;
+    object-fit: cover;
+    object-position: top;
+}
+.slidesA li:target {
+    z-index: 3;
+    -webkit-animation-delay: 1;
+    animation-delay: 1s;
+}
+.slidesA li:not(:target) {
+    -webkit-animation-delay: hidden 1;
+    animation-delay: 1s;
+}
+@keyframes slide {
+    0% {
+        transform: translateY(-100%);
+   }
+    100% {
+        transform: translateY(0%);
+   }
+}
+@keyframes hidden {
+    0% {
+        z-index: 2;
+   }
+    100% {
+        z-index: 2;
+   }
 }
 
 /*Responsive design*/
