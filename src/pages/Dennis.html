@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <!--Corresponde al menú-->
+        <!--Corresponds to the menu-->
         <div class="menu">
             <ul>
                 <li>GIROS</li>
@@ -33,9 +33,9 @@
             </ul>
         </div>
 
-<!--Corresponde a la sección de giros-->
+<!--Corresponds to the turns section-->
         <h2>Giros</h2>
-        <section class="giros"> 
+        <section class="giros" id="giros"> 
             <div class="card2 Giro_completo">
                 Giro completo
             </div>
@@ -60,9 +60,9 @@
 
         </section>
 
-    <!--Corresponde a la sección de transiciones-->
+    <!--Corresponds to the transitions section-->
        <h2>Transiciones</h2>
-        <section class="transiciones"> 
+        <section class="transiciones" id="transiciones"> 
             <div class="card2 slideLeft">
                 Llegada desde derecha
             </div>
@@ -77,9 +77,9 @@
             </div>
         </section>
 
-    <!--Corresponde a la sección de Zoom-->
+    <!--Corresponds to the Zoom section-->
        <h2>Zoom</h2>
-        <section class="zoom"> 
+        <section class="zoom" id="zoom"> 
             <div class="card2 zoomIn">
                 Zoom In
             </div>
@@ -88,7 +88,7 @@
             </div>
         </section>
 
-    <!--Corresponde a la sección de Animaciones-->
+    <!--Corresponds to the Animations section-->
         <h2>Animaciones</h2>
         <section class="anim" id="anim">
             <div id="visor">
@@ -104,13 +104,15 @@
                     <use class="text" xlink:href="#s-text"></use>
                     <use class="text" xlink:href="#s-text"></use>
                     <use class="text" xlink:href="#s-text"></use>
-                </svg>
-                <form action="#" name="controles" id="controles">
-                    <p><button class="ov-btn-slide-close"  name="stop" onclick="parar()">¡DETENTE!</button>
-                    <button class="ov-btn-slide-close"  name="play" onclick="seguir()">¡SIGUE EN VUELO!</button>
-                </form>	                 
+                </svg>           
             </div>
         </section>
+        <div class="buttonss">
+            <form action="#" name="controles" id="controles">
+                <p><button class="ov-btn-slide-close"  name="stop" onclick="parar()">¡DETENTE!</button>
+                <button class="ov-btn-slide-close"  name="play" onclick="seguir()">¡SIGUE EN VUELO!</button>
+            </form>        
+        </div>
         <section class="otraAnimacion" id="otraAnimacion">
             <div class="containerA">
                 <ul class="slidesA">
